@@ -29,6 +29,12 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
+		<!--热部署功能devtools依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
 		<!--Junit单元测试启动器-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

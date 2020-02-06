@@ -12,4 +12,8 @@ public class HelloController {
     public String  hello(){
         return "index";
     }
+
+    public static void main(String[] args) {
+        System.out.println("nihao");
+    }
 }

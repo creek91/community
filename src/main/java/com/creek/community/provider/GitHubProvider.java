@@ -2,7 +2,6 @@ package com.creek.community.provider;
 
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.creek.community.dto.AccessTokenDTO;
 import com.creek.community.dto.GitHubUser;
 import okhttp3.*;
@@ -28,11 +27,14 @@ public class GitHubProvider {
         try (Response response = client.newCall(request).execute()) {
             String str = response.body().string();
             System.out.println(str);
+
             String[] split = str.split("&");
             String tokenString = split[0];
             String[] strings = tokenString.split("=");
             str=strings[1];
+
             System.out.println(str);
+
             return str;
         } catch (IOException e) {
             e.printStackTrace();
